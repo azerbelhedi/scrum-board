@@ -1,0 +1,50 @@
+:root {
+  --color-1: #da9833;
+  --color-2: #3c70a4;
+  --color-3: #64b2cd;
+  --color-4: #d9eeec;
+}
+
+.nav-bar {
+  background-color: var(--color-1);
+  box-shadow: 1px 1px 5px var(--color-3);
+}
+
+.nav-bar .title {
+  color: var(--color-4);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 35px;
+  font-family: "Saira Stencil One", cursive;
+}
+
+.nav-bar .title:hover {
+  color: var(--color-2);
+  cursor: pointer;
+}
+
+.nav-bar .nav-item {
+  color: var(--color-2);
+  margin-left: 10px;
+  font-family: "Saira Stencil One", cursive;
+}
+
+.nav-bar .nav-item:hover {
+  text-decoration: none;
+}
+
+.nav-bar .nav-button {
+  background-color: var(--color-2);
+  border: none;
+  color: var(--color-4);
+  font-family: "Saira Stencil One", cursive;
+}
+
+.nav-bar .nav-button:hover {
+  color: var(--color-1);
+  border: none;
+}
+
+.nav-bar .nav-button:focus {
+  background-color: var(--color-2);
+}
