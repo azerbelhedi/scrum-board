@@ -14,7 +14,7 @@
   color: var(--color-4);
   text-decoration: none;
   font-weight: bold;
-  font-size: 35px;
+  font-size: 28px;
   font-family: "Saira Stencil One", cursive;
 }
 
@@ -48,3 +48,9 @@
 .nav-bar .nav-button:focus {
   background-color: var(--color-2);
 }
+
+.app-body {
+  background-color: var(--color-4);
+  height : 100vh ;
+}
+

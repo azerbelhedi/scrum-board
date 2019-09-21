@@ -9,16 +9,16 @@ import UserStory from "../UserStory/UserStory";
 
 const Routes = props => {
   return (
-    <h3>
+    <div className="app-body">
       <Router>
         <NavBar />
         <Route exact path="/" component={Home} />
         <Route path="/login" component={Login} />
         <Route path="/backlog" component={Backlog} />
-        <Route path="/sprint" component={Sprint} />{" "}
+        <Route path="/sprint" component={Sprint} />
         <Route path="/user-story" component={UserStory} />
       </Router>
-    </h3>
+    </div>
   );
 };
 
