@@ -1,3 +1,7 @@
 .project-box:hover {
   cursor: pointer;
 }
+
+.no-link-ui:hover {
+  text-decoration: none;
+}
