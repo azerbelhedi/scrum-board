@@ -4,6 +4,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import SearchBar from "./SearchBar";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
+import database from "../../Database/Database";
+import products from "../../Database/components/Products";
 
 const Home = ({ match }) => {
   let [projects, setProjects] = React.useState([]);
@@ -24,37 +26,11 @@ const Home = ({ match }) => {
   const classes = useStyles();
 
   React.useEffect(() => {
-    setProjects([
-      ...projects,
-      {
-        name: "Mysterio",
-        sprint: 3,
-        totalSprints: 7,
-        progress: 15
-      },
-      {
-        name: "Pepper Academy",
-        sprint: 1,
-        totalSprints: 8,
-        progress: 9
-      }
-    ]);
-
-    setFiltredProjects([
-      ...projects,
-      {
-        name: "Mysterio",
-        sprint: 3,
-        totalSprints: 7,
-        progress: 15
-      },
-      {
-        name: "Pepper Academy",
-        sprint: 1,
-        totalSprints: 8,
-        progress: 9
-      }
-    ]);
+    products.getProducts(data => {
+      // console.log(data);
+      setProjects([...projects, ...data]);
+      setFiltredProjects([...projects, ...data]);
+    });
   }, []);
 
   const filterSearch = localSearchString => {
@@ -95,6 +71,17 @@ const Home = ({ match }) => {
     setProjects(newProjectsList);
     setFiltredProjects(newProjectsList);
     setSearchString("");
+    // console.log(database.store)
+    // database.db
+    //   .collection("projects")
+    //   .doc(name)
+    //   .set({
+    //     name: name,
+    //     sprint: 0,
+    //     totalSprints: 0,
+    //     progress: 0
+    //   });
+    products.addProduct(name);
   };
 
   return (
