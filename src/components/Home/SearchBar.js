@@ -2,17 +2,11 @@ import React from "react";
 import TextField from "@material-ui/core/TextField";
 
 const SearchBar = props => {
-  // let [searchString, setSearchString] = React.useState("");
-
-  const handleStringSearchChange = e => {
-    props.setSearchString(e.target.value);
-  };
-
   return (
     <TextField
       id="filled-full-width"
       label="Projects"
-      style={{ width: "70%", margin: 30 }}
+      style={{ margin: "0px 0px" }}
       placeholder="Search Or Create"
       fullWidth
       margin="normal"
@@ -22,7 +16,7 @@ const SearchBar = props => {
       }}
       value={props.searchString}
       onChange={e => {
-        handleStringSearchChange(e);
+        props.handleStringSearchChange(e);
       }}
     />
   );

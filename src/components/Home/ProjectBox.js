@@ -12,7 +12,7 @@ export default function ProjectBox(props) {
   const useStyles = makeStyles({
     card: {
       width: "95%",
-      backgroundColor: props.color,
+      backgroundColor: props.sprint === 0 ? Colors.color1 : Colors.color2 ,
       margin: "10px"
     }
   });
